@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/vimfiles/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -84,28 +84,9 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-"limits the number of characters per line
-set dictionary=~\SkyDrive\Documents\VIM\Dictionary.txt
+set dictionary=~\vimfiles\dictionary.txt
 
 "Specific to this computer
-set tags+=~/.vim/tags/cpp_src/tags
-set tags+=~/Work/PRODUCT/DEV-Wistron/Core-RT/tags
-"set tags+=~/Work/PRODUCT/DEV/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/include/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/ObjectLibrary/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/BuiltInFunctions/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/Data/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/Helper/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/include/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/ObjectLibrary/tagsdb/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/ScreenTask/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/Script/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/Security/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/Task/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/TCPClient/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/VBScriptEngine/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/ThirdParty/TaskToolkit/tags
-"set tags+=~/Work/PRODUCT/DEV/Core-RT/UnitTests/tags
 if &term =~ '^xterm'
   " solid underscore
   "let &t_SI .= "\<Esc>[5 q"
@@ -123,7 +104,6 @@ nmap <C-K><SPACE> :%s/\s\+$//g<CR>
 nmap <C-K><C-G> :%s/\/\/\([^ ]\)/\/\/ \1/g<CR>
 nmap <C-K> <C-T> :!updatetags
 nmap <C-K><C-B>  :make<CR>
-nmap <C-K><C-L> :exec "!C:/Users/JoséLourenço/Lint.bat" substitute(expand('%:p'), 'JoséLourenço', 'JosLou~1', '')
 nmap <C-K><C-F> mdggVG=='d
 nmap <C-K><C-P> viwpyiw
 nmap <C-K><C-S> yi"
@@ -131,7 +111,6 @@ nmap <C-K><C-S> yi"
 map <C-n> :NERDTreeToggle<CR>
 
 "Depending on the OS, change this
-set guifont=Monospace\ 13
-"set gfn=Lucida_Console:h12:cANSI
+set gfn=Lucida_Console:h10:cANSI
 let OmniCpp_GlobalScopeSearch = 1
 set makeprg=compile\ % 
